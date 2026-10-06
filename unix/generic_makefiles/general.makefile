@@ -42,7 +42,7 @@ ifeq ($(BUILD),release)
 	CFLAGS 	+= -O3 -s -Wshadow
  	LDFLAGS += -s
 else
-	CFLAGS 	+= -g -O0 -ggdb  -Wshadow
+	CFLAGS 	+= -g -O0 -ggdb  -Wshadow -fno-omit-frame-pointer
 	LDFLAGS +=  -g
 	CPPFLAGS += -D_DEBUG
 endif
